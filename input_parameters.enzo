@@ -19,20 +19,26 @@ PotentialIterations = 32
 ClusterRefineAtStart   = 1
 ClusterNumberOfSpheres = 1
 ClusterUseParticles    = 0
-ClusterInitialTemperature = 60000000
+ClusterInitialTemperature = 50000000
 #
-ClusterSphereRadius[0]     = 0.47   #6 keV cluster
-ClusterSphereDensity[0]    = 2100.0   #6 keV cluster
-ClusterSphereType[0]       = 8        #6 keV cluster, no self gravity
-ClusterSphereCoreRadius[0] = 0.1044   #6 keV cluster
+ClusterSphereRadius[0]     = 0.45   #Perseus cluster
+ClusterSphereDensity[0]    = 2250.0   #perseus cluster
+ClusterSphereType[0]       = 8        #Perseus cluster, no self gravity
+ClusterSphereCoreRadius[0] = 0.088   #Perseus cluster
 ClusterSpherePosition[0]   = 0.5 0.5 0.5
 ClusterSphereVelocity[0]   = 0.0 0.0 0.0   // Random Velocity in unit of km/s
 ClusterInitialSpinParameter= 0.0
 ClusterSMBHFeedback        = 0
-ClusterSMBHMass            = 5.0e10
+ClusterSMBHMass            = 1.1e9    #Perseus
 EllipticalGalaxyRe         = 0.0
-OldStarFeedbackAlpha       = 1.0
+OldStarFeedbackAlpha       = 0.0
 #ClusterUniformVelocity     = 0.4 0 0
+ClusterSphereC200          = 5.1    #Perseus
+ClusterBCGRho0             = 10.0   #Perseus
+ClusterBCGA0               = 5.0    #Perseus
+ClusterBaryonK0            = 20.0   #Entropy, K0
+ClusterBaryonK100          = 110.0  #Entropy, K100
+ClusterBaryonAlphaK        = 1.1    #Entropy, alpha
 #
 #  define cosmology parameters
 #
@@ -48,18 +54,16 @@ GravitationalConstant      = 1       // this must be true for cosmology
 TimeUnits=1.78152e+17
 DensityUnits = 3.7576e-29
 LengthUnits = 1.2344e+25
-#LengthUnits= 4.93708e+25
-#
 #
 #  set I/O and stop/start parameters
 #
-StopTime                = 0.85 // 5 Gyr
-dtDataDump              = 0.0017  //10 Myr 
+StopTime                = 0.00085 // 5 Myr
+dtDataDump              = 0.00017  //1 Myr 
 #TimeLastDataDump        = 0.818804124522
 #CycleSkipDataDump       =  1
 #CycleLastDataDump       =  1
 DataDumpName            = output_
-StopCycle              = 100000000
+StopCycle              = 10
 OutputFirstTimeAtLevel     = 4
 #StopFirstTimeAtLevel       = 15
 #
